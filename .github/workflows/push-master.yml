@@ -1,0 +1,13 @@
+on:
+  push:
+    branches: ["master"] # Triggers only on pushes to 'master'
+
+jobs:
+  print_time:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4 # Required to access repo files
+
+      - name: Echo current time
+        run: echo "✅ Push to master detected! Time $(date)"
