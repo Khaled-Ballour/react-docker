@@ -1,18 +1,17 @@
 on:
-  workflow_dispatch:
-    inputs:
-      name:
-        description: "Person to Greet"
-        required: true
-        type: string
-      greeting:
-        description: "Type of greeting"
-        required: true
-        type: string
-      data:
-        description: "Based Encoded File"
-        required: false
-        type: string
+  inputs:
+    name:
+      description: "Person to Greet"
+      required: true
+      type: string
+    greeting:
+      description: "Type of greeting"
+      required: true
+      type: string
+    data:
+      description: "Based Encoded File"
+      required: false
+      type: string
 jobs:
   greet:
     runs-on: ubuntu-latest
